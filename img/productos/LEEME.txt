@@ -1,0 +1,23 @@
+Una foto por pieza, cuadrada 1200x1200, fondo claro.
+El nombre del archivo debe coincidir con el slug del arreglo PIEZAS en index.html:
+
+grapa-tipo-o.jpg
+herraje-tipo-d.jpg
+herraje-tipo-perita.jpg
+herraje-tipo-j.jpg
+preformados-fibra.jpg
+herraje-tangente-mediano.jpg
+herraje-extension.jpg
+herraje-extension-d.jpg
+herraje-extension-perita.jpg
+herraje-tipo-violin.jpg
+herraje-cruce-sencillo.jpg
+canal-tipo-cruceta.jpg
+ancla-con-muerto.jpg
+abrazadera-tipo-u.jpg
+fleje.jpg
+hebilla.jpg
+preformados-cable-acero.jpg
+bobina-galvanizada.jpg
+flejadora-uso-rudo.jpg
+flejadora-uso-liviano.jpg
