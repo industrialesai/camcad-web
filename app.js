@@ -6,12 +6,8 @@
 /* 1) LOGOS DE CLIENTES
       archivo = img/clientes/<archivo>  ·  alt = nombre visible */
 const LOGOS = [
-  {archivo:"telmex.png",    alt:"Telmex"},
-  {archivo:"telcel.png",    alt:"Telcel"},
-  {archivo:"cliente-3.png", alt:""},
-  {archivo:"cliente-4.png", alt:""},
-  {archivo:"cliente-5.png", alt:""},
-  {archivo:"cliente-6.png", alt:""}
+  {archivo:"telmex-1.svg",  alt:"Telmex"},
+  {archivo:"logo-telcel.svg", alt:"Telcel"}
 ];
 
 /* 2) CATÁLOGO
