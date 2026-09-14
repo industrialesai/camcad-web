@@ -4,7 +4,7 @@
    ========================================================= */
 
 /* 0) CORREO AL QUE LLEGAN LAS SOLICITUDES DEL FORMULARIO */
-const CORREO = "ventas@camcad-mfg.com";
+const CORREO = "direccion@ccmsolutions.com.mx";
 
 /* 1) LOGOS DE CLIENTES
       archivo = img/clientes/<archivo>  ·  alt = nombre visible */
