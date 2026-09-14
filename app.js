@@ -3,6 +3,9 @@
    Todo lo editable vive aquí arriba.
    ========================================================= */
 
+/* 0) CORREO AL QUE LLEGAN LAS SOLICITUDES DEL FORMULARIO */
+const CORREO = "ventas@camcad-mfg.com";
+
 /* 1) LOGOS DE CLIENTES
       archivo = img/clientes/<archivo>  ·  alt = nombre visible */
 const LOGOS = [
@@ -112,5 +115,5 @@ $("#form-cotizacion").addEventListener("submit", e => {
   e.preventDefault();
   const d = new FormData(e.target);
   const cuerpo = `Nombre: ${d.get("nombre")}%0D%0AEmpresa: ${d.get("empresa")}%0D%0ACorreo: ${d.get("correo")}%0D%0ATipo: ${d.get("tipo")}%0D%0A%0D%0A${d.get("mensaje")}`;
-  window.location.href = `mailto:ventas@camcad.mx?subject=Solicitud de cotización — ${d.get("empresa") || d.get("nombre")}&body=${cuerpo}`;
+  window.location.href = `mailto:${CORREO}?subject=Solicitud de cotización — ${d.get("empresa") || d.get("nombre")}&body=${cuerpo}`;
 });
