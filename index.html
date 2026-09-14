@@ -151,7 +151,7 @@ section{padding:104px 0}
 .lamina::before,.lamina::after{content:"";position:absolute;width:11px;height:11px;border:1.5px solid var(--gris-cl);z-index:2}
 .lamina::before{top:7px;left:7px;border-right:0;border-bottom:0}
 .lamina::after{bottom:7px;right:7px;border-left:0;border-top:0}
-.lamina img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}
+.lamina img{width:100%;height:100%;object-fit:contain;position:relative;z-index:1;padding:12px;mix-blend-mode:multiply}
 .lamina .vacio{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-family:var(--display);font-size:10.5px;font-weight:700;color:var(--gris-cl);line-height:1.4}
 .parte .clave{display:inline-block;font-family:var(--display);font-size:12.5px;font-weight:800;letter-spacing:.09em;background:var(--tinta);color:var(--papel);padding:4px 9px}
 .parte h4{font-size:1.38rem;font-weight:800;margin:12px 0 9px}
@@ -265,7 +265,6 @@ footer a:hover{color:var(--hivis)}
         <span>TOQUE UN PUNTO PARA IR A LA PIEZA</span>
       </div>
       <svg viewBox="0 0 1180 430" role="img" aria-label="Dibujo técnico de un claro de tendido aéreo entre dos postes con las posiciones de cada herraje">
-        <!-- terreno con hachurado -->
         <line class="tierra" x1="0" y1="360" x2="1180" y2="360"/>
         <g class="hatch">
           <line x1="20" y1="378" x2="38" y2="360"/><line x1="70" y1="378" x2="88" y2="360"/>
@@ -281,18 +280,14 @@ footer a:hover{color:var(--hivis)}
           <line x1="1020" y1="378" x2="1038" y2="360"/><line x1="1070" y1="378" x2="1088" y2="360"/>
           <line x1="1120" y1="378" x2="1138" y2="360"/>
         </g>
-        <!-- postes -->
         <line class="poste-l" x1="215" y1="48" x2="215" y2="360"/>
         <line class="poste-l" x1="900" y1="66" x2="900" y2="360"/>
         <line class="poste-l" x1="158" y1="104" x2="272" y2="104" stroke-width="4"/>
-        <!-- retenida -->
         <line class="cable" x1="215" y1="158" x2="92" y2="360" style="animation-delay:1.2s"/>
-        <!-- claros -->
         <path class="cable" d="M215 140 Q 557 222 900 156"/>
         <path class="cable" d="M215 184 Q 557 270 900 200" style="animation-delay:.35s"/>
         <path class="cable" d="M900 156 Q 1040 198 1180 176" style="animation-delay:.7s"/>
 
-        <!-- cotas -->
         <g>
           <line class="cota-l" x1="215" y1="392" x2="900" y2="392"/>
           <line class="cota-l" x1="215" y1="384" x2="215" y2="400"/>
@@ -307,21 +302,19 @@ footer a:hover{color:var(--hivis)}
           <text class="cota-t" x="960" y="182">40–100 cm</text>
         </g>
 
-        <!-- guías -->
         <line class="guia" x1="272" y1="104" x2="330" y2="62"/><text class="etiqueta" x="336" y="58">Cruceta y cabecera</text>
         <line class="guia" x1="557" y1="204" x2="557" y2="262"/><text class="etiqueta" x="557" y="284" text-anchor="middle">Claro de fibra ADSS</text>
         <line class="guia" x1="92" y1="338" x2="92" y2="300"/><text class="etiqueta" x="92" y="288" text-anchor="middle">Retenida y ancla</text>
 
-        <!-- puntos -->
         <g class="punto" data-pieza="canal-tipo-cruceta" tabindex="0" role="button" aria-label="Canal tipo cruceta">
           <circle cx="262" cy="104" r="17"/><text x="262" y="104">1</text></g>
         <g class="punto" data-pieza="herraje-tipo-d" tabindex="0" role="button" aria-label="Herraje tipo D de remate">
           <circle cx="215" cy="140" r="17"/><text x="215" y="140">2</text></g>
-        <g class="punto" data-pieza="preformados-fibra" tabindex="0" role="button" aria-label="Preformados para fibra">
+        <g class="punto" data-pieza="comercilizacion-preformados-para-fibra-optica" tabindex="0" role="button" aria-label="Preformados para fibra óptica">
           <circle cx="557" cy="204" r="17"/><text x="557" y="204">3</text></g>
-        <g class="punto" data-pieza="herraje-extension" tabindex="0" role="button" aria-label="Herraje de extensión">
+        <g class="punto" data-pieza="herraje-de-extencion-tipo-d" tabindex="0" role="button" aria-label="Herraje de extensión tipo D">
           <circle cx="900" cy="156" r="17"/><text x="900" y="156">4</text></g>
-        <g class="punto" data-pieza="fleje" tabindex="0" role="button" aria-label="Fleje y hebilla">
+        <g class="punto" data-pieza="comercializacion-fleje" tabindex="0" role="button" aria-label="Fleje y hebilla">
           <circle cx="900" cy="262" r="17"/><text x="900" y="262">5</text></g>
         <g class="punto" data-pieza="ancla-con-muerto" tabindex="0" role="button" aria-label="Ancla con muerto">
           <circle cx="92" cy="338" r="17"/><text x="92" y="338">6</text></g>
@@ -329,8 +322,8 @@ footer a:hover{color:var(--hivis)}
       <ul class="leyenda">
         <li><b>1</b>Canal tipo cruceta</li>
         <li><b>2</b>Herraje tipo "D" de remate</li>
-        <li><b>3</b>Preformados para fibra</li>
-        <li><b>4</b>Herraje de extensión</li>
+        <li><b>3</b>Preformados para fibra óptica</li>
+        <li><b>4</b>Herraje de extensión tipo "D"</li>
         <li><b>5</b>Fleje y hebilla</li>
         <li><b>6</b>Ancla con muerto</li>
       </ul>
@@ -520,36 +513,39 @@ const LOGOS = [
 ];
 
 /* =========================================================
-   2) CATÁLOGO — editar aquí para agregar, quitar o renombrar piezas.
-      slug   = nombre del archivo en img/productos/<slug>.jpg
-      clave  = la que aparece en la lista de partes
-      grupo  = genera las secciones y el índice superior
+   2) CATÁLOGO
+      slug = nombre EXACTO del archivo en img/productos/<slug>.webp
+      Si subes una foto nueva, agrega aquí su renglón con el mismo nombre.
    ========================================================= */
 const PIEZAS = [
   {slug:"grapa-tipo-o", clave:"CC-FO-01", grupo:"Fibra óptica", nombre:'Grapa tipo "O"', desc:"Sujeta el mensajero de la fibra óptica y permite ajustarlo en sitio.", attr:{Material:"Acero estructural", Acabado:"Galvanizado por inmersión NMX-J-004", Sujeción:"Ajustable"}},
   {slug:"herraje-tipo-d", clave:"CC-FO-02", grupo:"Fibra óptica", nombre:'Herraje tipo "D"', desc:"Remate para cable ADSS y FB; el sistema de rodamiento facilita la sujeción.", attr:{Material:"Acero estructural", Tensión:"1.5 t", Sujeción:"Un solo fleje"}},
-  {slug:"herraje-tipo-perita", clave:"CC-FO-03", grupo:"Fibra óptica", nombre:'Herraje tipo "Perita"', desc:"Remate para cable ADSS y FB con doble punto de sujeción.", attr:{Material:"Acero estructural", Tensión:"1.5 t", Sujeción:"Doble fleje"}},
+  {slug:"herraje-tipo-pera", clave:"CC-FO-03", grupo:"Fibra óptica", nombre:'Herraje tipo "Perita"', desc:"Remate para cable ADSS y FB con doble punto de sujeción.", attr:{Material:"Acero estructural", Tensión:"1.5 t", Sujeción:"Doble fleje"}},
   {slug:"herraje-tipo-j", clave:"CC-FO-04", grupo:"Fibra óptica", nombre:'Herraje tipo "J"', desc:"Sujeción de fibra óptica con protección contra intemperie.", attr:{Barrenos:"2", Protección:"Goma neopreno resistente a UV", Acabado:"Galvanizado por inmersión"}},
-  {slug:"preformados-fibra", clave:"CC-FO-05", grupo:"Fibra óptica", nombre:"Preformados para fibra", desc:"Sujeción de fibra ADSS con preformado dimensionado por calibre de cable.", attr:{Medidas:"9-10 al 17-18", Material:"Alambre aluminizado", Forma:"Varillas unidas con adhesivo, dobladas en U"}},
+  {slug:"comercilizacion-preformados-para-fibra-optica", clave:"CC-FO-05", grupo:"Fibra óptica", nombre:"Preformados para fibra óptica", desc:"Sujeción de fibra ADSS con preformado dimensionado por calibre de cable.", attr:{Medidas:"9-10 al 17-18", Material:"Alambre aluminizado", Forma:"Varillas unidas con adhesivo, dobladas en U"}},
 
   {slug:"herraje-tangente-mediano", clave:"CC-LA-01", grupo:"Línea aérea", nombre:"Herraje tangente mediano", desc:"Sujeción de cable de acero en tramos tangentes.", attr:{Material:"Acero estructural", Acabado:"Galvanizado por inmersión NMX-J-004"}},
-  {slug:"herraje-extension", clave:"CC-LA-02", grupo:"Línea aérea", nombre:"Herraje de extensión", desc:"Aleja el cable de acero del poste en manejos estándar.", attr:{Manejos:"40, 60 y 100 cm", Refuerzo:"Redondo", Medidas:"Flexibles según proyecto"}},
-  {slug:"herraje-extension-d", clave:"CC-LA-03", grupo:"Línea aérea", nombre:'Herraje de extensión tipo "D"', desc:"Extensión con remate tipo D para separar el cable del poste.", attr:{Manejos:"40, 60 y 100 cm", Material:"Acero estructural", Acabado:"Galvanizado por inmersión"}},
-  {slug:"herraje-extension-perita", clave:"CC-LA-04", grupo:"Línea aérea", nombre:'Herraje de extensión tipo "Perita"', desc:"Extensión con remate tipo perita en medidas estándar de poste.", attr:{Manejos:"40, 60 y 100 cm", Refuerzo:"Redondo", Acabado:"Galvanizado por inmersión"}},
-  {slug:"herraje-tipo-violin", clave:"CC-LA-05", grupo:"Línea aérea", nombre:"Herraje tipo violín", desc:"Separa el cable de acero del cuerpo del poste.", attr:{Material:"Acero estructural", Acabado:"Galvanizado por inmersión"}},
-  {slug:"herraje-cruce-sencillo", clave:"CC-LA-06", grupo:"Línea aérea", nombre:"Herraje de cruce sencillo", desc:"Resuelve el cambio de dirección del cable protegiéndolo de la fricción.", attr:{Tornillos:"2", Material:"Acero estructural", Acabado:"Galvanizado por inmersión"}},
-  {slug:"canal-tipo-cruceta", clave:"CC-LA-07", grupo:"Línea aérea", nombre:"Canal tipo cruceta", desc:"Da paso al acero y a la fibra, alejándolos del poste y de la alta tensión.", attr:{Incluye:"Abrazaderas tipo U", Material:"Acero estructural", Acabado:"Galvanizado por inmersión"}},
-  {slug:"ancla-con-muerto", clave:"CC-LA-08", grupo:"Línea aérea", nombre:"Ancla con muerto", desc:"Soporte de retenida del poste, enterrado para anclar la instalación al suelo.", attr:{Profundidad:"Hasta 30 m", Material:"Lámina de acero estructural", Armado:"Varilla soldada al canal"}},
+  {slug:"herraje-de-tencion", clave:"CC-LA-02", grupo:"Línea aérea", nombre:"Herraje de tensión", desc:"Remata y tensa el cable de acero contra el poste.", attr:{Material:"Acero estructural", Tensión:"1.5 t", Acabado:"Galvanizado por inmersión"}},
+  {slug:"herraje-de-extencion-tipo-d", clave:"CC-LA-03", grupo:"Línea aérea", nombre:'Herraje de extensión tipo "D"', desc:"Aleja el cable del poste con remate tipo D.", attr:{Manejos:"40, 60 y 100 cm", Refuerzo:"Redondo", Acabado:"Galvanizado por inmersión"}},
+  {slug:"herraje-de-extencion-tipo-perita", clave:"CC-LA-04", grupo:"Línea aérea", nombre:'Herraje de extensión tipo "Perita"', desc:"Extensión con remate tipo perita en medidas estándar de poste.", attr:{Manejos:"40, 60 y 100 cm", Refuerzo:"Redondo", Acabado:"Galvanizado por inmersión"}},
+  {slug:"herraje-de-extencion-tipo-j", clave:"CC-LA-05", grupo:"Línea aérea", nombre:'Herraje de extensión tipo "J"', desc:"Extensión con remate tipo J para separar la fibra del poste.", attr:{Manejos:"40, 60 y 100 cm", Flexibilidad:"Medidas a necesidad del cliente", Acabado:"Galvanizado por inmersión"}},
+  {slug:"herraje-tipo-violin", clave:"CC-LA-06", grupo:"Línea aérea", nombre:"Herraje tipo violín", desc:"Separa el cable de acero del cuerpo del poste.", attr:{Material:"Acero estructural", Acabado:"Galvanizado por inmersión"}},
+  {slug:"herraje-de-cruce-sencillo", clave:"CC-LA-07", grupo:"Línea aérea", nombre:"Herraje de cruce sencillo", desc:"Resuelve el cambio de dirección del cable protegiéndolo de la fricción.", attr:{Tornillos:"2", Material:"Acero estructural", Acabado:"Galvanizado por inmersión"}},
+  {slug:"canal-tipo-cruceta", clave:"CC-LA-08", grupo:"Línea aérea", nombre:"Canal tipo cruceta", desc:"Da paso al acero y a la fibra, alejándolos del poste y de la alta tensión.", attr:{Incluye:"Abrazaderas tipo U", Material:"Acero estructural", Acabado:"Galvanizado por inmersión"}},
+  {slug:"ancla-con-muerto", clave:"CC-LA-09", grupo:"Línea aérea", nombre:"Ancla con muerto", desc:"Soporte de retenida del poste, enterrado para anclar la instalación al suelo.", attr:{Profundidad:"Hasta 30 m", Material:"Lámina de acero estructural", Armado:"Varilla soldada al canal"}},
 
   {slug:"abrazadera-tipo-u", clave:"CC-SF-01", grupo:"Sujeción y fleje", nombre:"Abrazadera tipo U", desc:"Sujeta los brazos de extensión al poste.", attr:{Medidas:"8 y 10 pulgadas", Material:"Acero estructural", Acabado:"Galvanizado por inmersión"}},
-  {slug:"fleje", clave:"CC-SF-02", grupo:"Sujeción y fleje", nombre:"Fleje", desc:"Fija los herrajes de extensión y de tensión al poste.", attr:{Material:"Acero inoxidable AISI 201, no magnético", Medidas:"5/8 y 3/4", Tensión:"115,000 PSI"}},
-  {slug:"hebilla", clave:"CC-SF-03", grupo:"Sujeción y fleje", nombre:"Hebilla", desc:"Cierra y amarra el fleje en sitio.", attr:{Material:"Acero inoxidable AISI 201", Norma:"ASTM A-413/2010", Tensión:"115,000 PSI"}},
-  {slug:"preformados-cable-acero", clave:"CC-SF-04", grupo:"Sujeción y fleje", nombre:"Preformados para cable de acero", desc:"Sujeción del acero en las medidas comunes de obra.", attr:{Medidas:"1/8, 3/16, 1/4, 1/16 y 3/8", Forma:"Varilla helicoidal en U", Acabado:"Galvanizado por inmersión"}},
+  {slug:"comercializacion-fleje", clave:"CC-SF-02", grupo:"Sujeción y fleje", nombre:"Fleje", desc:"Fija los herrajes de extensión y de tensión al poste.", attr:{Material:"Acero inoxidable AISI 201, no magnético", Medidas:"5/8 y 3/4", Tensión:"115,000 PSI"}},
+  {slug:"comercializacion-evilla", clave:"CC-SF-03", grupo:"Sujeción y fleje", nombre:"Hebilla", desc:"Cierra y amarra el fleje en sitio.", attr:{Material:"Acero inoxidable AISI 201", Norma:"ASTM A-413/2010", Tensión:"115,000 PSI"}},
+  {slug:"comercializacion-preformados-para-cable-de-acero", clave:"CC-SF-04", grupo:"Sujeción y fleje", nombre:"Preformados para cable de acero", desc:"Sujeción del acero en las medidas comunes de obra.", attr:{Medidas:"1/8, 3/16, 1/4, 1/16 y 3/8", Forma:"Varilla helicoidal en U", Acabado:"Galvanizado por inmersión"}},
   {slug:"bobina-galvanizada", clave:"CC-SF-05", grupo:"Sujeción y fleje", nombre:"Bobina galvanizada", desc:"Alambre para el tejido de la fibra de acero, compatible con espinar C2 y J2.", attr:{Calibre:"18, galvanizado", Carrete:"400 metros lineales"}},
 
-  {slug:"flejadora-uso-rudo", clave:"CC-HE-01", grupo:"Herramienta", nombre:"Flejadora de uso rudo", desc:"Fija el fleje al poste para sujetar fibra y estructuras.", attr:{Compatibilidad:"Fleje 5/8 y 3/4", Cuerpo:"Acero resistente"}},
-  {slug:"flejadora-uso-liviano", clave:"CC-HE-02", grupo:"Herramienta", nombre:"Flejadora de uso liviano", desc:"Fijación de fleje en trabajos de mantenimiento y carga ligera.", attr:{Uso:"Liviano", Manejo:"En campo"}}
+  {slug:"flejadora-de-uso-rudo", clave:"CC-HE-01", grupo:"Herramienta", nombre:"Flejadora de uso rudo", desc:"Fija el fleje al poste para sujetar fibra y estructuras.", attr:{Compatibilidad:"Fleje 5/8 y 3/4", Cuerpo:"Acero resistente"}},
+  {slug:"comercializacion-flejadora-de-uso-libiano", clave:"CC-HE-02", grupo:"Herramienta", nombre:"Flejadora de uso liviano", desc:"Fijación de fleje en trabajos de mantenimiento y carga ligera.", attr:{Uso:"Liviano", Manejo:"En campo"}}
 ];
+
+/* Extensión de las fotos de producto. Si algún día subes .jpg, cámbiala aquí. */
+const EXT = "webp";
 
 /* ---------- Render ---------- */
 const $ = s => document.querySelector(s);
@@ -569,8 +565,8 @@ $("#lista-partes").innerHTML = grupos.map(g => {
     ${lote.map(p => `
       <article class="parte" id="p-${p.slug}">
         <div class="lamina">
-          <span class="vacio">FOTO PENDIENTE<br>${p.slug}.jpg</span>
-          <img src="img/productos/${p.slug}.jpg" alt="${p.nombre}" loading="lazy" onerror="this.remove()">
+          <span class="vacio">FOTO PENDIENTE<br>${p.slug}.${EXT}</span>
+          <img src="img/productos/${p.slug}.${EXT}" alt="${p.nombre}" loading="lazy" onerror="this.remove()">
         </div>
         <div>
           <span class="clave tab">${p.clave}</span>
