@@ -1,0 +1,2 @@
+Logos de clientes en PNG con fondo transparente, altura 200 px.
+Nombres esperados: telmex.png, telcel.png, cliente-3.png ... cliente-6.png
