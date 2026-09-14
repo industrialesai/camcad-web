@@ -9,7 +9,7 @@
 <meta property="og:description" content="Fabricante mexicano de herrajes para redes de telecomunicaciones y líneas aéreas.">
 <meta property="og:image" content="img/og-camcad.jpg">
 <meta property="og:type" content="website">
-<link rel="icon" href="img/favicon.png">
+<link rel="icon" href="img/productos/camcadlogo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
@@ -46,9 +46,9 @@ h1,h2,h3,h4{font-family:var(--display);line-height:1.04;letter-spacing:-.025em}
 
 /* ---------- Encabezado ---------- */
 .topbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
-.topbar .wrap{display:flex;align-items:center;gap:32px;height:80px}
+.topbar .wrap{display:flex;align-items:center;gap:32px;height:86px}
 .marca{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
-.marca img{height:44px;width:auto}
+.marca img{height:56px;width:auto}
 .marca .fallback{font-family:var(--display);font-weight:900;font-size:23px;letter-spacing:.08em;color:var(--grafito)}
 .nav{display:flex;gap:28px;margin-left:auto;font-size:15px;font-weight:500}
 .nav a{text-decoration:none;color:var(--gris);padding:5px 0;border-bottom:2px solid transparent}
@@ -136,7 +136,7 @@ section{padding:104px 0}
 
 /* ---------- Catálogo ---------- */
 .catalogo{background:var(--niebla)}
-.indice{position:sticky;top:80px;z-index:40;background:rgba(244,245,246,.96);backdrop-filter:blur(8px);border-top:1px solid var(--linea-2);border-bottom:1px solid var(--linea-2)}
+.indice{position:sticky;top:86px;z-index:40;background:rgba(244,245,246,.96);backdrop-filter:blur(8px);border-top:1px solid var(--linea-2);border-bottom:1px solid var(--linea-2)}
 .indice ul{list-style:none;display:flex;gap:30px;overflow-x:auto;padding:17px 0;font-family:var(--display);font-size:14px;font-weight:700;letter-spacing:.02em}
 .indice a{text-decoration:none;color:var(--gris);white-space:nowrap;padding-bottom:4px;border-bottom:2px solid transparent}
 .indice a:hover{color:var(--tinta);border-bottom-color:var(--hivis)}
@@ -209,13 +209,15 @@ footer a:hover{color:var(--hivis)}
 }
 @media (max-width:820px){
   .nav{display:none}
-  .nav.abierto{display:flex;position:absolute;top:80px;left:0;right:0;background:var(--papel);flex-direction:column;padding:18px 30px;gap:2px;border-bottom:1px solid var(--linea)}
+  .nav.abierto{display:flex;position:absolute;top:86px;left:0;right:0;background:var(--papel);flex-direction:column;padding:18px 30px;gap:2px;border-bottom:1px solid var(--linea)}
   .nav.abierto a{padding:12px 0}
   .topbar .btn{display:none}
+  .topbar .wrap{height:74px}
+  .marca img{height:46px}
   .menu-btn{display:block}
   .plano .etiqueta,.plano .guia,.plano .cota-l,.plano .cota-t{display:none}
   .leyenda{display:block}
-  .indice{top:80px}
+  .indice{top:74px}
   .enc{grid-template-columns:1fr;gap:14px}
   .parte{grid-template-columns:108px 1fr;gap:22px}
   .parte h4{font-size:1.16rem}
@@ -234,7 +236,7 @@ footer a:hover{color:var(--hivis)}
 <header class="topbar">
   <div class="wrap">
     <a href="#" class="marca" aria-label="CAMCAD Manufacturing, inicio">
-      <img src="img/camcad-logo.png" alt="CAMCAD Manufacturing" onerror="this.outerHTML='<span class=\'fallback\'>CAMCAD</span>'">
+      <img src="img/productos/camcadlogo.png" alt="CAMCAD Manufacturing" onerror="this.outerHTML='<span class=\'fallback\'>CAMCAD</span>'">
     </a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav-principal">Menú</button>
     <nav class="nav" id="nav-principal">
